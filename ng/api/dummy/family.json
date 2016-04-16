@@ -1,0 +1,19 @@
+[{
+    "fam_id": "1",
+    "fam_fname": "Monica",
+    "fam_lname": "Brown",
+    "fam_address_street": "No. 5 Caravelle Loop",
+    "fam_address_street2": "",
+    "fam_address_city": "Palos Hills",
+    "fam_address_state": "",
+    "fam_relationship": "Daughter",
+    "fam_company": "SysteMAX",
+    "fam_department": "Customer Relations",
+    "fam_workphone": "8152962851",
+    "fam_homephone": "7088288291",
+    "fam_cellphone": "",
+    "fam_email": "monica.brown@systemax.com",
+    "fam_notes": "Works 11AM - 7PM",
+    "fam_patid": "1",
+    "co_id": "1"
+    }]

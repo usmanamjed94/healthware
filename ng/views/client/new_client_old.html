@@ -1,0 +1,1543 @@
+<div class="sysheader ng-scope">
+    <span>{ cli_name }</span>
+    Client Information :: View Information
+</div>
+
+<!-- ===== Tab Strip ===== -->
+<div class="css3-tabstrip">
+    <ul>
+        <!-- Personal -->
+        <li>
+            <input type="radio" name="css3-tabstrip-0" class="tb" checked="checked" id="css3-tabstrip-0-0" />
+            <label class="grey" for="css3-tabstrip-0-0">Personal</label>
+            <div>
+                <div class="table ng-scope">
+
+                    <div class="row header grey">
+                        <div class="cell solid">
+                            Personal
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            First Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Date Of Birth
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="DOB" name="ssn" placeholder="MM/DD/YYYY" maxlength=10>
+                            <script type="text/javascript">
+                                $('#DOB').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 2) && (val.length < 6)) {
+                                        newVal += val.substr(0, 2) + '/';
+                                        val = val.substr(2);
+                                    }
+                                    if(val.length > 5) {
+                                        newVal += val.substr(0, 2) + '/';
+                                        newVal += val.substr(2, 2) + '/';
+                                        val = val.substr(4);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Middle Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Sex
+                        </div>
+                        <div class="cell">
+                            <input type="radio" name="sex" value="male">&nbsp;Male
+                            <input type="radio" name="sex" value="female">&nbsp;Female
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Last Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="" name="DOB">
+                        </div>
+                        <div class="cell label">
+                            SSN
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="ssn" name="ssn" placeholder="XXX-XX-XXXX" maxlength=11>
+                            <script type="text/javascript">
+                                $('#ssn').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 3) && (val.length < 6)) {
+                                        newVal += val.substr(0, 3) + '-';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 5) {
+                                        newVal += val.substr(0, 3) + '-';
+                                        newVal += val.substr(3, 2) + '-';
+                                        val = val.substr(5);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Prefered Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            CCU
+                        </div>
+                        <div class="cell">
+                            <select name="ccu" tabindex="" class="w175" style="width: 150px; min-width: 150px; margin-right: 4px;">
+                                <option value="0">------------ N/A ------------</option>
+                                <option ng-repeat="ccu in CCUs" value="{{ ccu.ccu_id }}">{{ ccu.ccu_name }}</option>
+                            </select>
+
+                            <script styp="text/javascript">
+                                var ccuadd;
+
+                                function poptastic(url) {
+                                    newwindow = window.open(url, 'name', 'top=300,left=400,height=290,width=475,resizable=no,scrollbars=no,toolbar=no,status=no');
+                                    if(window.focus) {
+                                        newwindow.focus()
+                                    }
+                                }
+                            </script>
+
+                            <a href="javascript:poptastic('./ng/api/popups/popup.html#/ccuadd');">
+                                <button  style="width:25px; height: 24px; line-height: 18px;">
+                                    +
+                                </button>
+                            </a>
+
+                            <!-- ======================= ADD CCU MODAL ============================= -->
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="" name="DOB">
+                        </div>
+                        <div class="cell label">
+                            Start Date
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="startdate" name="startdate" placeholder="MM/DD/YYYY" maxlength=10>
+                            <script type="text/javascript">
+                                $('#startdate').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 2) && (val.length < 6)) {
+                                        newVal += val.substr(0, 2) + '/';
+                                        val = val.substr(2);
+                                    }
+                                    if(val.length > 5) {
+                                        newVal += val.substr(0, 2) + '/';
+                                        newVal += val.substr(2, 2) + '/';
+                                        val = val.substr(4);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address 2
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="" name="">
+                        </div>
+                        <div class="cell label">
+                            Case Worker
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="" name="" placeholder="" maxlength=30>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            City
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Photo on file
+                        </div>
+                        <div class="cell">
+                            <input type="radio" name="photofiled" value="yes">&nbsp;Yes
+                            <input type="radio" name="photofiled" value="no">&nbsp;No
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            State
+                        </div>
+                        <div class="cell">
+                            <select name="state" class="w175" tabindex="">
+                                <option value="0">Alabama</option>
+                                <option value="1">Alaska</option>
+                                <option value="2">Arizona</option>
+                                <option value="3">Arkansas</option>
+                                <option value="4">California</option>
+                                <option value="5">Colorado</option>
+                                <option value="6">Connecticut</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">District of Columbia</option>
+                                <option value="9">Florida</option>
+                                <option value="10">Georgia</option>
+                                <option value="11">Hawaii</option>
+                                <option value="12">Idaho</option>
+                                <option value="13" selected="">Illinois</option>
+                                <option value="14">Indiana</option>
+                                <option value="15">Iowa</option>
+                                <option value="16">Kansas</option>
+                                <option value="17">Kentucky</option>
+                                <option value="18">Louisiana</option>
+                                <option value="19">Maine</option>
+                                <option value="20">Maryland</option>
+                                <option value="21">Massachusetts</option>
+                                <option value="22">Michigan</option>
+                                <option value="23">Minnesota</option>
+                                <option value="24">Mississippi</option>
+                                <option value="25">Missouri</option>
+                                <option value="26">Montana</option>
+                                <option value="27">Nebraska</option>
+                                <option value="28">Nevada</option>
+                                <option value="29">New Hampshire</option>
+                                <option value="30">New Jersey</option>
+                                <option value="31">New Mexico</option>
+                                <option value="32">New York</option>
+                                <option value="33">North Carolina</option>
+                                <option value="34">North Dakota</option>
+                                <option value="35">Ohio</option>
+                                <option value="36">Oklahoma</option>
+                                <option value="37">Oregon</option>
+                                <option value="38">Pennsylvania</option>
+                                <option value="39">Rhode Island</option>
+                                <option value="40">South Carolina</option>
+                                <option value="41">South Dakota</option>
+                                <option value="42">Tennessee</option>
+                                <option value="43">Texas</option>
+                                <option value="44">Utah</option>
+                                <option value="45">Vermont</option>
+                                <option value="46">Virginia</option>
+                                <option value="47">Washington</option>
+                                <option value="48">West Virginia</option>
+                                <option value="49">Wisconsin</option>
+                                <option value="50">Wyoming</option>
+                                <option value="51">Foreign</option>
+                            </select>
+                        </div>
+                        <div class="cell label">
+                            Payment Method
+                        </div>
+                        <div class="cell">
+                            <select name="payment" class="w175" tabindex="">
+                                <option value="0" selected="">Any</option>
+                                <option value="1">Private Pay</option>
+                                <option value="2">CCP Billing</option>
+                                <option value="3">MCO Billing</option>
+                                <option value="4">VA</option>
+                                <option value="5">DORS</option>
+                                <option value="6">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Zip Code (5 or 9)
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="zip" name="zipcode" placeholder="00000-0000" maxlength=10>
+                            <script type="text/javascript">
+                                $('#zip').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    while(val.length > 5) {
+                                        newVal += val.substr(0, 5) + '-';
+                                        val = val.substr(5);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                        <div class="cell label">
+                            Current Status
+                        </div>
+                        <div class="cell">
+                            <select name="ccu" tabindex="" class="w175">
+                                <option value="1">Active</option>
+                                <option value="2" selected>Inactive</option>
+                                <option value="3">Medical Leave</option>
+                                <option value="4">Vacation Leave</option>
+                                <option value="5">Temporary Leave</option>
+                                <option value="6">Deceased</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Phone Number
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="phone1" name="phone1" placeholder="(000) 000-0000" maxlength=14>
+                            <script type="text/javascript">
+                                $('#phone1').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 0) && (val.length < 4)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        val = val.substr(0);
+                                    }
+                                    if((val.length > 3) && (val.length < 7)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 6) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        newVal += val.substr(3, 3) + '-';
+                                        val = val.substr(6);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                        <div class="cell label">
+                            Living Arrangement
+                        </div>
+                        <div class="cell">
+                            <select name="ccu" tabindex="" class="w175">
+                                <option disabled selected value="0">Unknown (Select One)</option>
+                                <option value="2">Lives Alone</option>
+                                <option value="3">Lives With Spouse</option>
+                                <option value="4">Lives With Family</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Alt Phone Number
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="phone2" name="phone2" placeholder="(000) 000-0000" maxlength=14>
+                            <script type="text/javascript">
+                                $('#phone2').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 0) && (val.length < 4)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        val = val.substr(0);
+                                    }
+                                    if((val.length > 3) && (val.length < 7)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 6) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        newVal += val.substr(3, 3) + '-';
+                                        val = val.substr(6);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                        <div class="cell label">
+                            Notes
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="" name="" placeholder="Max 128 Characters" maxlength=128>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="table ng-scope">
+
+                    <div class="row header grey">
+                        <div class="cell solid">
+                            MCO Data
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell">
+                            MCO Name
+                        </div>
+                        <div class="cell">
+                            <select name="mco" tabindex="" class="w175">
+                                <option value="000">------------ N/A ------------</option>
+                                <option value="aet">Aetna</option>
+                                <option value="blu">Blue Cross</option>
+                                <option value="hum">Humana</option>
+                                <option value="ill">IlliniCare</option>
+                            </select>
+                        </div>
+                        <div class="cell">
+                            MCO Member ID
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            Procedure Codes
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell">
+                            Medicare No.
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            Medicaid No.
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell">
+                            Authorization No.
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            Case Manager
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell">
+                            Case Manager Phone
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="mcocm_phone" name="phone2" placeholder="(000) 000-0000" maxlength=14>
+                            <script type="text/javascript">
+                                $('#mcocm_phone').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 0) && (val.length < 4)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        val = val.substr(0);
+                                    }
+                                    if((val.length > 3) && (val.length < 7)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 6) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        newVal += val.substr(3, 3) + '-';
+                                        val = val.substr(6);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell">
+                            Diagnosis
+                        </div>
+                        <div class="cell">
+                            <textarea name="" id="" class="w175"></textarea>
+                        </div>
+                        <div class="cell">
+                            MCO Comments
+                        </div>
+                        <div class="cell">
+                            <textarea name="" id="" class="w175"></textarea>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </li>
+        <!-- Family -->
+        <li>
+            <input type="radio" name="css3-tabstrip-0" class="tb" id="css3-tabstrip-0-1" />
+            <label class="purple" for="css3-tabstrip-0-1">Family</label>
+            <div>
+
+
+
+                <div class="table ng-scope">
+
+                    <div class="row header purple">
+                        <div class="cell solid">
+                            Family
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            First Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="ffirstname" id="ffirstname">
+                        </div>
+                        <div class="cell label">
+                            Company
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Last Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Department
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address 1
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Work Phone
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="famworkphone" name="famworkphone" placeholder="(000) 000-0000" maxlength=14>
+                            <script type="text/javascript">
+                                $('#famworkphone').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 0) && (val.length < 4)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        val = val.substr(0);
+                                    }
+                                    if((val.length > 3) && (val.length < 7)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 6) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        newVal += val.substr(3, 3) + '-';
+                                        val = val.substr(6);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address 2
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Home Phone
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="famhomephone" name="famhomephone" placeholder="(000) 000-0000" maxlength=14>
+                            <script type="text/javascript">
+                                $('#famhomephone').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 0) && (val.length < 4)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        val = val.substr(0);
+                                    }
+                                    if((val.length > 3) && (val.length < 7)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 6) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        newVal += val.substr(3, 3) + '-';
+                                        val = val.substr(6);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            City
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Cell Phone
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="famcellphone" name="famcellphone" placeholder="(000) 000-0000" maxlength=14>
+                            <script type="text/javascript">
+                                $('#famcellphone').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 0) && (val.length < 4)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        val = val.substr(0);
+                                    }
+                                    if((val.length > 3) && (val.length < 7)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 6) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        newVal += val.substr(3, 3) + '-';
+                                        val = val.substr(6);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            State
+                        </div>
+                        <div class="cell">
+                            <select name="state" class="w175" tabindex="">
+                                <option value="0">Alabama</option>
+                                <option value="1">Alaska</option>
+                                <option value="2">Arizona</option>
+                                <option value="3">Arkansas</option>
+                                <option value="4">California</option>
+                                <option value="5">Colorado</option>
+                                <option value="6">Connecticut</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">District of Columbia</option>
+                                <option value="9">Florida</option>
+                                <option value="10">Georgia</option>
+                                <option value="11">Hawaii</option>
+                                <option value="12">Idaho</option>
+                                <option value="13" selected="">Illinois</option>
+                                <option value="14">Indiana</option>
+                                <option value="15">Iowa</option>
+                                <option value="16">Kansas</option>
+                                <option value="17">Kentucky</option>
+                                <option value="18">Louisiana</option>
+                                <option value="19">Maine</option>
+                                <option value="20">Maryland</option>
+                                <option value="21">Massachusetts</option>
+                                <option value="22">Michigan</option>
+                                <option value="23">Minnesota</option>
+                                <option value="24">Mississippi</option>
+                                <option value="25">Missouri</option>
+                                <option value="26">Montana</option>
+                                <option value="27">Nebraska</option>
+                                <option value="28">Nevada</option>
+                                <option value="29">New Hampshire</option>
+                                <option value="30">New Jersey</option>
+                                <option value="31">New Mexico</option>
+                                <option value="32">New York</option>
+                                <option value="33">North Carolina</option>
+                                <option value="34">North Dakota</option>
+                                <option value="35">Ohio</option>
+                                <option value="36">Oklahoma</option>
+                                <option value="37">Oregon</option>
+                                <option value="38">Pennsylvania</option>
+                                <option value="39">Rhode Island</option>
+                                <option value="40">South Carolina</option>
+                                <option value="41">South Dakota</option>
+                                <option value="42">Tennessee</option>
+                                <option value="43">Texas</option>
+                                <option value="44">Utah</option>
+                                <option value="45">Vermont</option>
+                                <option value="46">Virginia</option>
+                                <option value="47">Washington</option>
+                                <option value="48">West Virginia</option>
+                                <option value="49">Wisconsin</option>
+                                <option value="50">Wyoming</option>
+                                <option value="51">Foreign</option>
+                            </select>
+                        </div>
+                        <div class="cell label">
+                            Email
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Relationship
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Notes
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="" placeholder="Limit: 180 Characters">
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            </div>
+        </li>
+        <!-- Schedule -->
+        <li>
+            <input type="radio" name="css3-tabstrip-0" class="tb" id="css3-tabstrip-0-2" />
+            <label class="green" for="css3-tabstrip-0-2">Schedule</label>
+            <div>
+                <div class="table ng-scope">
+
+                    <div class="row header green">
+                        <div class="cell solid">
+                            Weekly Schedule
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Monday
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" style="float: left; width: 72px; margin-right: 3px;" id="" placeholder="Start Time">
+                            <input type="text" name="" style="float: left;  width: 72px;" id="" placeholder="End Time">
+                        </div>
+                        <div class="cell label">
+                            CCP Units Per Day
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Tuesday
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" style="float: left; width: 72px; margin-right: 3px;" id="" placeholder="Start Time">
+                            <input type="text" name="" style="float: left;  width: 72px;" id="" placeholder="End Time">
+                        </div>
+                        <div class="cell label">
+                            CCP Days Per Week
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Wednesday
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" style="float: left; width: 72px; margin-right: 3px;" id="" placeholder="Start Time">
+                            <input type="text" name="" style="float: left;  width: 72px;" id="" placeholder="End Time">
+                        </div>
+                        <div class="cell label">
+                            CCP Units Per Week
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Thursday
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" style="float: left; width: 72px; margin-right: 3px;" id="" placeholder="Start Time">
+                            <input type="text" name="" style="float: left;  width: 72px;" id="" placeholder="End Time">
+                        </div>
+                        <div class="cell label">
+                            CCP Units Per Month
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Friday
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" style="float: left; width: 72px; margin-right: 3px;" id="" placeholder="Start Time">
+                            <input type="text" name="" style="float: left;  width: 72px;" id="" placeholder="End Time">
+                        </div>
+                        <div class="cell label">
+                            Total Income
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="" placholder="0">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Saturday
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" style="float: left; width: 72px; margin-right: 3px;" id="" placeholder="Start Time">
+                            <input type="text" name="" style="float: left;  width: 72px;" id="" placeholder="End Time">
+                        </div>
+                        <div class="cell label">
+                            Family Size
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Sunday
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" style="float: left; width: 72px; margin-right: 3px;" id="" placeholder="Start Time">
+                            <input type="text" name="" style="float: left;  width: 72px;" id="" placeholder="End Time">
+                        </div>
+                        <div class="cell label">
+                            DON Score
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="cell solid">
+                        </div>
+                        <div class="cell">
+                        </div>
+                        <div class="cell label">
+                            Fee Schedule
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell label">
+                            Most Recent Assessment:
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="#assmntdate" name="assmntdate" placeholder="MM/DD/YYYY" maxlength=10>
+                            <script type="text/javascript">
+                                $('#assmntdate').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 2) && (val.length < 6)) {
+                                        newVal += val.substr(0, 2) + '/';
+                                        val = val.substr(2);
+                                    }
+                                    if(val.length > 5) {
+                                        newVal += val.substr(0, 2) + '/';
+                                        newVal += val.substr(2, 2) + '/';
+                                        val = val.substr(4);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                        <div class="cell label">
+                            Maximum Co-Pay
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="cell label">
+                            Comments
+                        </div>
+                        <div class="cell" style="overflow: visible;">
+                            <input type="text" name="" placeholder="Limit 254 Characters">
+                        </div>
+                        <div class="cell label">
+                            Other Service Cost
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </li>
+        <!-- Doctors -->
+        <li>
+            <input type="radio" name="css3-tabstrip-0" class="tb" id="css3-tabstrip-0-3" />
+            <label class="blue" for="css3-tabstrip-0-3">Doctors</label>
+            <div>
+                <div class="table ng-scope">
+
+                    <div class="row header blue">
+                        <div class="cell solid">
+                            Doctors
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            First Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Title
+                        </div>
+                        <div class="cell">
+                            <select name="doc_title" id="doc_title" class="w175">
+                                <option value="M.D.">M.D.</option>
+                                <option value="R.N.">R.N.</option>
+                                <option value="L.P.N.">L.P.N.</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Last Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Work Phone
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address 1
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Primary Dr.
+                        </div>
+                        <div class="cell">
+                            <input type="radio" name="pcp" value="Yes">&nbsp;Yes
+                            <input type="radio" name="pcp" value="No">&nbsp;No
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address 2
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Actively Seeing
+                        </div>
+                        <div class="cell">
+                            <input type="radio" name="pcas" value="Yes">&nbsp;Yes
+                            <input type="radio" name="pcas" value="No">&nbsp;No
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            City
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Years Seeing Dr.
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="" style="width: 34px;">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            State
+                        </div>
+                        <div class="cell">
+                            <select name="state" class="w175" tabindex="">
+                                <option value="0">Alabama</option>
+                                <option value="1">Alaska</option>
+                                <option value="2">Arizona</option>
+                                <option value="3">Arkansas</option>
+                                <option value="4">California</option>
+                                <option value="5">Colorado</option>
+                                <option value="6">Connecticut</option>
+                                <option value="7">Delaware</option>
+                                <option value="8">District of Columbia</option>
+                                <option value="9">Florida</option>
+                                <option value="10">Georgia</option>
+                                <option value="11">Hawaii</option>
+                                <option value="12">Idaho</option>
+                                <option value="13" selected="">Illinois</option>
+                                <option value="14">Indiana</option>
+                                <option value="15">Iowa</option>
+                                <option value="16">Kansas</option>
+                                <option value="17">Kentucky</option>
+                                <option value="18">Louisiana</option>
+                                <option value="19">Maine</option>
+                                <option value="20">Maryland</option>
+                                <option value="21">Massachusetts</option>
+                                <option value="22">Michigan</option>
+                                <option value="23">Minnesota</option>
+                                <option value="24">Mississippi</option>
+                                <option value="25">Missouri</option>
+                                <option value="26">Montana</option>
+                                <option value="27">Nebraska</option>
+                                <option value="28">Nevada</option>
+                                <option value="29">New Hampshire</option>
+                                <option value="30">New Jersey</option>
+                                <option value="31">New Mexico</option>
+                                <option value="32">New York</option>
+                                <option value="33">North Carolina</option>
+                                <option value="34">North Dakota</option>
+                                <option value="35">Ohio</option>
+                                <option value="36">Oklahoma</option>
+                                <option value="37">Oregon</option>
+                                <option value="38">Pennsylvania</option>
+                                <option value="39">Rhode Island</option>
+                                <option value="40">South Carolina</option>
+                                <option value="41">South Dakota</option>
+                                <option value="42">Tennessee</option>
+                                <option value="43">Texas</option>
+                                <option value="44">Utah</option>
+                                <option value="45">Vermont</option>
+                                <option value="46">Virginia</option>
+                                <option value="47">Washington</option>
+                                <option value="48">West Virginia</option>
+                                <option value="49">Wisconsin</option>
+                                <option value="50">Wyoming</option>
+                                <option value="51">Foreign</option>
+                            </select>
+                        </div>
+                        <div class="cell label">
+                            Phone Number
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="drphone1" name="phone1" placeholder="(000) 000-0000" maxlength=14>
+                            <script type="text/javascript">
+                                $('#drphone1').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 0) && (val.length < 4)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        val = val.substr(0);
+                                    }
+                                    if((val.length > 3) && (val.length < 7)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 6) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        newVal += val.substr(3, 3) + '-';
+                                        val = val.substr(6);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Zip Code (5 or 9)
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="zip" name="zipcode" placeholder="00000-0000" maxlength=10>
+                            <script type="text/javascript">
+                                $('#zip').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    while(val.length > 5) {
+                                        newVal += val.substr(0, 5) + '-';
+                                        val = val.substr(5);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                        <div class="cell label">
+                            Phone Number
+                        </div>
+                        <div class="cell">
+                            <input type="text" id="drphone2" name="phone1" placeholder="(000) 000-0000" maxlength=14>
+                            <script type="text/javascript">
+                                $('#drphone2').keyup(function() {
+                                    var val = this.value.replace(/\D/g, '');
+                                    var newVal = '';
+                                    if(val.length > 4) {
+                                        this.value = val;
+                                    }
+                                    if((val.length > 0) && (val.length < 4)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        val = val.substr(0);
+                                    }
+                                    if((val.length > 3) && (val.length < 7)) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        val = val.substr(3);
+                                    }
+                                    if(val.length > 6) {
+                                        newVal += val.substr(0, 0) + '(';
+                                        newVal += val.substr(0, 3) + ') ';
+                                        newVal += val.substr(3, 3) + '-';
+                                        val = val.substr(6);
+                                    }
+                                    newVal += val;
+                                    this.value = newVal;
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- Medications -->
+        <li>
+            <input type="radio" name="css3-tabstrip-0" class="tb" id="css3-tabstrip-0-4" />
+            <label class="orange" for="css3-tabstrip-0-4">Medications</label>
+            <div>
+                <div class="table ng-scope">
+
+                    <div class="row header orange">
+                        <div class="cell solid">
+                            Medications
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Name Of Medicine
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Current Status
+                        </div>
+                        <div class="cell">
+                            <select name="ccu" tabindex="" class="w175">
+                                <option value="0" selected>Taking</option>
+                                <option value="1">As Needed</option>
+                                <option value="2">Not Taking</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Taken For
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Taken At
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" style="float: left; width: 72px; margin-right: 3px;" id="" placeholder="Time">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Dosage/Frequency:
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Perscribed By
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Visual description
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Special directions/precautions
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+
+                </div>
+                <br>
+                <br>This will not look like this in the end. this will be a table showing this data, and a button to add other medications.
+
+            </div>
+        </li>
+        <!-- 911 Info -->
+        <li>
+            <input type="radio" name="css3-tabstrip-0" class="tb" id="css3-tabstrip-0-5" />
+            <label class="red" for="css3-tabstrip-0-5">911</label>
+            <div>
+                <div class="table ng-scope">
+
+                    <div class="row header red">
+                        <div class="cell solid">
+                            Emergency Info
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            First Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Company
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Last Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Department
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address 1
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Work Phone
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- Care Plans --
+        <li>
+            <input type="radio" name="css3-tabstrip-0" class="tb" id="css3-tabstrip-0-6" />
+            <label class="pink" for="css3-tabstrip-0-6">Care Plans</label>
+            <div>
+                <div class="table ng-scope">
+
+                    <div class="row header pink">
+                        <div class="cell solid">
+                           Care Plans
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            First Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Company
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Last Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Department
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address 1
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Work Phone
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <!-- Discussions --
+        <li>
+            <input type="radio" name="css3-tabstrip-0" class="tb" id="css3-tabstrip-0-7" />
+            <label class="cyan" for="css3-tabstrip-0-7">Discussions</label>
+            <div>
+                <div class="table ng-scope">
+
+                    <div class="row header cyan">
+                        <div class="cell solid">
+                            Discussions
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid">
+
+                        </div>
+                        <div class="cell solid right">
+                            <button>
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            First Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Company
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Last Name
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Department
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="cell label">
+                            Address 1
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                        <div class="cell label">
+                            Work Phone
+                        </div>
+                        <div class="cell">
+                            <input type="text" name="" id="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </li>
+-->
+    </ul>
+</div>
+

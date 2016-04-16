@@ -1,0 +1,38 @@
+<div class="sysheader ng-scope">
+    <span>Client List</span>
+    Client Information Dashboard :: All Categories
+</div>
+<div class="table ng-scope">
+    <div class="row header blue">
+        <div class="cell">
+            Name
+        </div>
+        <div class="cell">
+            DOB
+        </div>
+        <div class="cell">
+            City
+        </div>
+        <div class="cell">
+            View/Edit
+        </div>
+    </div>
+    <div class="row" ng-repeat="client in clients">
+        <div class="cell">
+            {{ client.cli_fname }} {{ client.cli_lname }}
+        </div>
+        <div class="cell">
+            {{ client.cli_dob }}
+        </div>
+        <div class="cell">
+            {{ client.cli_address_city }}
+        </div>
+        <div class="cell">
+            <a href="#/client_view/{{ client._id }}">
+                <button style="width: 100%;">
+                    View
+                </button>
+            </a>
+        </div>
+    </div>
+</div>

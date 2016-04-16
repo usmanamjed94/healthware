@@ -1,0 +1,68 @@
+[{
+    "ccu_id": "1",
+    "ccu_name": "HCI Healthcare Consortium of Illinois [Ext]",
+    "ccu_address_street": "123 1st St.",
+    "ccu_address_street2": "",
+    "ccu_address_city": "Somewhere",
+    "ccu_address_state": "",
+    "ccu_address_zipcode": "60463",
+    "ccu_phone": "",
+    "ccu_contact": "Jane Smith",
+    "co_id": "1"
+},{
+    "ccu_id": "2",
+    "ccu_name": "Plows Council on Aging",
+    "ccu_address_street": "123 1st St.",
+    "ccu_address_street2": "",
+    "ccu_address_city": "Somewhere",
+    "ccu_address_state": "",
+    "ccu_address_zipcode": "60463",
+    "ccu_phone": "",
+    "ccu_contact": "Jane Smith",
+    "co_id": "1"
+},{
+    "ccu_id": "3",
+    "ccu_name": "Senior Services Center [Ext]",
+    "ccu_address_street": "123 1st St.",
+    "ccu_address_street2": "",
+    "ccu_address_city": "Somewhere",
+    "ccu_address_state": "",
+    "ccu_address_zipcode": "60463",
+    "ccu_phone": "",
+    "ccu_contact": "Jane Smith",
+    "co_id": "1"
+},{
+    "ccu_id": "4",
+    "ccu_name": "South Suburban Senior Services (Catholic Charities)",
+    "ccu_address_street": "123 1st St.",
+    "ccu_address_street2": "",
+    "ccu_address_city": "Somewhere",
+    "ccu_address_state": "",
+    "ccu_address_zipcode": "60463",
+    "ccu_phone": "",
+    "ccu_contact": "Jane Smith",
+    "co_id": "1"
+
+},{
+    "ccu_id": "5",
+    "ccu_name": "Southwest Suburban Senior Services (Catholic Charities) [Ext]",
+    "ccu_address_street": "123 1st St.",
+    "ccu_address_street2": "",
+    "ccu_address_city": "Somewhere",
+    "ccu_address_state": "",
+    "ccu_address_zipcode": "60463",
+    "ccu_phone": "",
+    "ccu_contact": "Jane Smith",
+    "co_id": "1"
+},{
+    "ccu_id": "6",
+    "ccu_name": "Stickney, Township Of",
+    "ccu_address_street": "123 1st St.",
+    "ccu_address_street2": "",
+    "ccu_address_city": "Somewhere",
+    "ccu_address_state": "",
+    "ccu_address_zipcode": "60463",
+    "ccu_phone": "",
+    "ccu_contact": "Jane Smith",
+    "co_id": "1"
+}]

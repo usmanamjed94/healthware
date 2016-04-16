@@ -1,0 +1,200 @@
+/*
+    Document   : css/shame.css
+    Created on : 2015-10-09 07:57 PM
+    Author     : ov3rwatch
+    Description: Login Styles.
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Exo:100,200,400);
+* {
+    font-family: 'Exo', sans-serif !important;
+}
+
+.growl-container * {
+    font-family: 'Lato', sans-serif !important;
+}
+
+html,
+body {
+    width: 98%;
+    height: 98%;
+    background-color: #d8d8d8;
+    transition: all 0.3s linear;
+}
+
+.file-menu,
+.file-menu ul,
+.file-menu ul li,
+.file-menu ul li a,
+.file-menu ul li span {
+    display: none !important;
+}
+
+.header {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: calc(50% - 335px);
+    z-index: 2;
+    -webkit-animation: fadeIn 1.5s;
+    -moz-animation: fadeIn 1.5s;
+    -ms-animation: fadeIn 1.5s;
+    -o-animation: fadeIn 1.5s;
+    animation: fadeIn 1.5s;
+}
+
+.header div {
+    float: left;
+    color: #767676;
+    font-family: 'Exo', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.header div span {
+    color: #5379fa !important;
+    font-size: 35px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.login {
+    position: absolute;
+    top: calc(50% - 75px);
+    left: calc(50% - 50px);
+    height: 150px;
+    width: 350px;
+    padding: 10px;
+    z-index: 2;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    animation: fadeIn 3s;
+}
+
+.login input[type=text] {
+    display: block;
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #989898;
+    border-radius: 2px;
+    color: #787878;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+    transition: all .3s linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.login input[type=password] {
+    display: block;
+    width: 250px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #989898;
+    border-radius: 2px;
+    color: #787878;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 4px;
+    margin-top: 0px;
+    transition: all .3s linear;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.login input[type=submit] {
+    display: block;
+    width: 260px;
+    height: 35px;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 3px;
+    border: 1px solid #9e9e9e;
+    border-radius: 2px;
+    margin: 0 2px;
+    background: #f4f4f4;
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px -1px 2px -1px rgba(0, 0, 0, 0.28), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+    -moz-box-shadow: inset 0px -1px 2px -1px rgba(0, 0, 0, 0.28), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+    box-shadow: inset 0px -1px 2px -1px rgba(0, 0, 0, 0.28), inset 0px 1px 0px 0px rgba(255, 255, 255, 1);
+    transition: all .2s linear;
+}
+
+.login input[type=submit]:hover {
+    opacity: 0.8;
+}
+
+.login input[type=submit]:active {
+    opacity: 0.6;
+}
+
+.login input[type=text]:focus {
+    outline: none;
+    border: 1px solid rgba(45, 45, 45, .65);
+}
+
+.login input[type=password]:focus {
+    outline: none;
+    border: 1px solid rgba(45, 45, 45, .65);
+}
+
+.login input[type=button]:focus {
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: rgba(100, 100, 100, 0.4);
+}
+
+::-moz-input-placeholder {
+    color: rgba(100, 100, 100, 0.4);
+}
+
+@keyframes blink {
+    50% {
+        border-color: #a82a2a;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

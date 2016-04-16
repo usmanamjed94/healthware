@@ -1,0 +1,41 @@
+/*
+    Document   : css/shame.css
+    Created on : 2015-10-09 07:57 PM
+    Author     : ov3rwatch
+    Description: Store all the hacks that need to be refactored/fixed.
+*/
+
+html,
+body {
+    min-width: 1024px !important;
+}
+
+* {
+    font-family: 'Lato', sans-serif !important;
+}
+
+.file-menu ul ul li a,
+.file-menu ul ul li span {
+    color: #6e6e6e !important;
+}
+
+.file-menu ul ul li a:hover,
+.file-menu ul ul li span:hover {
+    color: #f5f5f5 !important;
+}
+
+.muted input,
+.muted select,
+.muted textarea {
+    background: transparent !important;
+    border: 1px transparent !important;
+}
+
+.muted input:focus,
+.muted select:focus,
+.muted textarea:focus {
+    border-radius: 0 !important;
+    border-bottom: 1px solid #999 !important;
+    background: white !important;
+    outline: none !important;
+}

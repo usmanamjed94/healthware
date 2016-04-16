@@ -1,0 +1,220 @@
+<!DOCTYPE HTML>
+<html ng-app="HomeCare">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>HomeHealthWare</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/wizard.css">
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.wizard.js"></script>
+    <script type="text/javascript" src="ng/dependencies/angular.js"></script>
+    <script type="text/javascript" src="ng/dependencies/angular-route.js"></script>
+    <script type="text/javascript" src="ng/dependencies/angular-animate.js"></script>
+    <script type="text/javascript" src="ng/angular-local-storage.min.js"></script>
+    <script type="text/javascript" src="ng/ngprogress.js"></script>
+    <script type="text/javascript" src="ng/nggrowl.js"></script>
+    <script type="text/javascript" src="ng/ngwizard.js"></script>
+    <script type="text/javascript" src="ng/ng-init.js"></script>
+    <script type="text/javascript" src="ng/controller/authentication.js"></script>
+    <script type="text/javascript" src="ng/controller/client.js"></script>
+    <script type="text/javascript" src="ng/controller/controllers.js"></script>
+    <script type="text/javascript" src="ng/service/auth.js"></script>
+    <script type="text/javascript" src="ng/service/authInterceptor.js"></script>
+
+    <!--    <script tyle="text/javascript">
+                if (!navigator.userAgent.match(/HomeHealthWare/i)) {
+                            $(location).attr('href', "/error/OOB.html")
+
+                        }
+    </script> -->
+
+</head>
+
+<body>
+    <div growl></div>
+    <!-- File-Menu -->
+    <div class="file-menu">
+        <ul>
+
+            <li>
+                <a href="#/">
+                          Dashboard
+                </a>
+            </li>
+            <li>
+                <span tabindex="1">Account</span>
+                <ul>
+                    <li>
+                        <a href="#/myaccount">
+                            My Account
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/login">
+                            Log Out
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span tabindex="1">Clients</span>
+                <ul>
+                    <li>
+                        <a href="#/client_list">
+                            Client List
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/new_client">
+                            Add New Client
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span tabindex="1">Schedule</span>
+                <ul>
+                    <li>
+                        <a href="#/schedule_daily">
+                            Daily Schedule
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/schedule_weekly">
+                            Weekly Schedule
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="#/schedule_router">
+                            Set Standard Schedule</a>
+                    </li> -->
+                </ul>
+            </li>
+            <li>
+                <span tabindex="1">Billing</span>
+                <ul>
+                    <li>
+                        <a href="#/jj">
+                            Private Billing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/">
+                            CCP Billing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/">
+                            MCO Billing
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/">
+                            Service Calendars
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/">
+                            Set Billing Rates
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/">
+                            Unconfirmed Time
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/">
+                            Overtime Report
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/">
+                            Change Payment Type
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span tabindex="1">Administration</span>
+                <ul>
+                    <li>
+                        <a href="#/mycompany">
+                            My Company
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/user_list">
+                            Employees
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/new_user">
+                            New Employee
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <span tabindex="1">Help</span>
+                <ul>
+                    <li>
+                        <a href="#/about">
+                            HomeHealthWare
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#/help">
+                            Get Help
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="back-to-top"><a href="">Back To Top</a>
+            </li>
+            <li class="onright">
+                <span class="nolights">Among Friends Adult Day Care</span>
+            </li>
+        </ul>
+    </div>
+    <!-- End File-Menu -->
+    <!-- MVC -->
+    <div class="content view-animate-container">
+        <div id="contentcontroller" ng-cloak ng-view class="view-animate wrapper">
+
+        </div>
+    </div>
+    <!-- End MVC -->
+    <!-- Run 3rd-party libraries and large scripts -->
+    <script type="text/javascript">
+        // "Back To Top" (BTT) Button for Long Content on Desktop
+        jQuery(document).ready(function () {
+            var offset = 220; //No. px from top of page before button is shown or hidden
+            var duration = 150; //No. ms the scrollTop animation should take for smoothness
+            jQuery(window).scroll(function () {
+                if (jQuery(this).scrollTop() > offset) {
+                    jQuery('.back-to-top').fadeIn(duration);
+                } else {
+                    jQuery('.back-to-top').fadeOut(duration);
+                }
+            });
+            // BTT Scroll Animation
+            jQuery('.back-to-top').click(function (event) {
+                event.preventDefault();
+                jQuery('html, body').animate({
+                    scrollTop: 0
+                }, duration);
+                return false;
+            })
+        });
+        // Other Stuff
+    </script>
+
+</body>
+
+</html>

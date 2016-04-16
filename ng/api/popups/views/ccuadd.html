@@ -1,0 +1,101 @@
+r<table style="width:445px;">
+            <tr>
+                <td>CCU Name</td>
+                <td>
+                    <input data-ng-model="newCCU.name2" style="width: calc(100% - 7px)" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>
+                    <input data-ng-model="newCCU.address_street" style="width: calc(100% - 7px)" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Address 2</td>
+                <td>
+                    <input data-ng-model="newCCU.address_street2" style="width: calc(100% - 7px)" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>City</td>
+                <td>
+                    <input data-ng-model="newCCU.address_city" style="width: calc(100% - 7px)" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>State</td>
+                <td>
+                    <select data-ng-model="newCCU.address_state" name="state" style="width: 100%" tabindex="">
+                        <option value="0">Alabama</option>
+                        <option value="1">Alaska</option>
+                        <option value="2">Arizona</option>
+                        <option value="3">Arkansas</option>
+                        <option value="4">California</option>
+                        <option value="5">Colorado</option>
+                        <option value="6">Connecticut</option>
+                        <option value="7">Delaware</option>
+                        <option value="8">District of Columbia</option>
+                        <option value="9">Florida</option>
+                        <option value="10">Georgia</option>
+                        <option value="11">Hawaii</option>
+                        <option value="12">Idaho</option>
+                        <option value="13" selected="">Illinois</option>
+                        <option value="14">Indiana</option>
+                        <option value="15">Iowa</option>
+                        <option value="16">Kansas</option>
+                        <option value="17">Kentucky</option>
+                        <option value="18">Louisiana</option>
+                        <option value="19">Maine</option>
+                        <option value="20">Maryland</option>
+                        <option value="21">Massachusetts</option>
+                        <option value="22">Michigan</option>
+                        <option value="23">Minnesota</option>
+                        <option value="24">Mississippi</option>
+                        <option value="25">Missouri</option>
+                        <option value="26">Montana</option>
+                        <option value="27">Nebraska</option>
+                        <option value="28">Nevada</option>
+                        <option value="29">New Hampshire</option>
+                        <option value="30">New Jersey</option>
+                        <option value="31">New Mexico</option>
+                        <option value="32">New York</option>
+                        <option value="33">North Carolina</option>
+                        <option value="34">North Dakota</option>
+                        <option value="35">Ohio</option>
+                        <option value="36">Oklahoma</option>
+                        <option value="37">Oregon</option>
+                        <option value="38">Pennsylvania</option>
+                        <option value="39">Rhode Island</option>
+                        <option value="40">South Carolina</option>
+                        <option value="41">South Dakota</option>
+                        <option value="42">Tennessee</option>
+                        <option value="43">Texas</option>
+                        <option value="44">Utah</option>
+                        <option value="45">Vermont</option>
+                        <option value="46">Virginia</option>
+                        <option value="47">Washington</option>
+                        <option value="48">West Virginia</option>
+                        <option value="49">Wisconsin</option>
+                        <option value="50">Wyoming</option>
+                        <option value="51">Foreign</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Zip Code</td>
+                <td>
+                    <input data-ng-model="newCCU.address_zipcode" style="width: calc(100% - 7px)" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td>
+                    <input data-ng-model="newCCU.phone" style="width: calc(100% - 7px)" type="text">
+                </td>
+            </tr>
+        </table>
+        <br>
+        <button data-ng-click="progress('success')" style="width:100%;">
+            Add CCU
+        </button>

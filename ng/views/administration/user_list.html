@@ -1,0 +1,38 @@
+<div class="sysheader ng-scope">
+    <span>Employee List</span>
+    Employee Information Dashboard :: All Categories
+</div>
+<div class="table ng-scope">
+    <div class="row header blue">
+        <div class="cell">
+            Name
+        </div>
+        <div class="cell">
+            Email
+        </div>
+        <div class="cell">
+            City
+        </div>
+        <div class="cell">
+            View/Edit
+        </div>
+    </div>
+    <div class="row" ng-repeat="user in users">
+        <div class="cell">
+            {{ user.uname }}
+        </div>
+        <div class="cell">
+            {{ user.email }}
+        </div>
+        <div class="cell">
+            {{ user.usr_address_city }}
+        </div>
+        <div class="cell">
+            <a href="#/user_view/{{ user._id }}">
+                <button style="width: 100%;">
+                    View
+                </button>
+            </a>
+        </div>
+    </div>
+</div>

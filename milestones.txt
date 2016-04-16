@@ -1,0 +1,40 @@
+
+|==============================================================================|
+|========================= HomeHealthWare MILESTONES ==========================|
+|==============================================================================|
+|                                                                              |
+|Basic breakdown of milestone. we can add more detail as info becomes available|
+|                                                                              |
+|================================= S T E P  1 =================================|
+|Client Section:                                                               |
+|    -Client List                                                              |
+|__	   -Plug this page into db (otherwise basically complete)              |
+|__       -View Button Redirect to a way of viewing the client                 |
+|__           -Client view needs to be plugged into db                         |
+|    -Add Client                                                               |
+|__       -This page needs to be converted to a wizard (I'll handle that)      |
+|__       -Upon wizard completion Data submits to DB                           |
+|                                                                              |
+|================================= S T E P  2 =================================|
+|Administration Section:                                                       |
+|    -My Company                                                               |
+|		  -Tie this into the db                                        |
+|		  -allow only administrators or super admins to modify this    |
+|                                                                              |
+|================================= S T E P  3 =================================|
+|Account Section:                                                              |
+|    -My Account                                                               |
+|__       -view information from db                                            |
+|__       -save information to db                                              |
+|                                                                              |
+|================================= S T E P  4 =================================|
+|                                                                              |
+|Schedule Section:                                                             |
+|    -This section will be completely rebuilt. ignore for now                  |
+|                                                                              |
+|================================= S T E P  5 =================================|
+|                                                                              |
+|Billing Section                                                               |
+|    -This section needs to be built. ignore for now                           |
+|                                                                              |
+|==============================================================================|

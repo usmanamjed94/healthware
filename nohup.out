@@ -1,0 +1,225 @@
+
+> home-healthware@1.0.0 start /srv/homehealthware
+> NODE_PATH=./config:./app/controllers NODE_ENV=development ./node_modules/.bin/nodemon server.js
+
+[33m[nodemon] 1.8.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node server.js`[39m
+
+stream.js:94
+      throw er; // Unhandled stream error in pipe.
+            ^
+Error: EBADF, read
+npm ERR! weird error 8
+npm WARN This failure might be due to the use of legacy binary "node"
+npm WARN For further explanations, please read
+/usr/share/doc/nodejs/README.Debian
+ 
+npm ERR! not ok code 0
+Express app started on port 9561
+[0mGET / [33m404 [0m6.746 ms - 35[0m
+[0mGET / [33m404 [0m1.182 ms - 35[0m
+[0mGET / [33m404 [0m0.700 ms - 35[0m
+[0mGET / [33m404 [0m0.585 ms - 35[0m
+[0mGET / [33m404 [0m0.953 ms - 35[0m
+Value of req before[object Object]
+Value of reqnull
+[0mGET /requiresAuthentication [33m403 [0m1.342 ms - 52[0m
+[0mOPTIONS /createUser [32m204 [0m0.387 ms - -[0m
+Password recvd while creating user:123245
+$2a$10$uuNVRg.XFi45z1IE5LwYXuzgtaluGJKw5f.w2xKqDlcRsGtLlY6xK
+Hashed password as I am saving: $2a$10$uuNVRg.XFi45z1IE5LwYXuzgtaluGJKw5f.w2xKqDlcRsGtLlY6xK
+[0mPOST /createUser [32m200 [0m159.956 ms - 400[0m
+[0mOPTIONS /createUser [32m204 [0m0.887 ms - -[0m
+[object Object]
+[0mPOST /createUser [33m409 [0m9.219 ms - 44[0m
+[0mOPTIONS /createUser [32m204 [0m0.137 ms - -[0m
+Password recvd while creating user:12345
+$2a$10$cl0la7gsXA.1kCh/BPF7ee4Jn4B5x6jxvLwmuW3KGEQ3mz/n6NgNS
+Hashed password as I am saving: $2a$10$cl0la7gsXA.1kCh/BPF7ee4Jn4B5x6jxvLwmuW3KGEQ3mz/n6NgNS
+[0mPOST /createUser [32m200 [0m119.958 ms - 378[0m
+[0mOPTIONS /createUser [32m204 [0m0.134 ms - -[0m
+Password recvd while creating user:12345
+[0mPOST /createUser [33m409 [0m4.737 ms - 315[0m
+[0mOPTIONS /createUser [32m204 [0m0.082 ms - -[0m
+Password recvd while creating user:12345
+[0mPOST /createUser [33m409 [0m3.126 ms - 323[0m
+[0mOPTIONS /createUser [32m204 [0m0.162 ms - -[0m
+Password recvd while creating user:12345
+$2a$10$xxG59CLvC3rpJlMF6vWc0eAwpe3aSdjzu0BrEfBvLIqpnqNXMdTjW
+Hashed password as I am saving: $2a$10$xxG59CLvC3rpJlMF6vWc0eAwpe3aSdjzu0BrEfBvLIqpnqNXMdTjW
+[0mPOST /createUser [32m200 [0m118.511 ms - 399[0m
+[object Object]
+[0mPOST /createUser [33m409 [0m4.286 ms - 44[0m
+[0mOPTIONS /createUser [32m204 [0m0.132 ms - -[0m
+Password recvd while creating user:12345
+[0mPOST /createUser [33m409 [0m5.564 ms - 325[0m
+Password recvd while creating user:12345
+[0mPOST /createUser [33m409 [0m4.567 ms - 325[0m
+[0mOPTIONS /createUser [32m204 [0m0.099 ms - -[0m
+Password recvd while creating user:12345
+$2a$10$gFdjy5f2a9X0N1Tp3ffgd.T4ji.lJLKKzYjymL9CsNujw62Pngyl6
+Hashed password as I am saving: $2a$10$gFdjy5f2a9X0N1Tp3ffgd.T4ji.lJLKKzYjymL9CsNujw62Pngyl6
+[0mPOST /createUser [32m200 [0m120.172 ms - 400[0m
+[0mOPTIONS /createUser [32m204 [0m0.121 ms - -[0m
+Password recvd while creating user:12345
+[0mPOST /createUser [33m409 [0m6.756 ms - 347[0m
+[0mOPTIONS /createUser [32m204 [0m0.137 ms - -[0m
+Password recvd while creating user:12345
+$2a$10$jVfstrYIOVDGYa.Lwu2nduId6losl7ygM.J7aYT6S254DFtGWK5ay
+Hashed password as I am saving: $2a$10$jVfstrYIOVDGYa.Lwu2nduId6losl7ygM.J7aYT6S254DFtGWK5ay
+[0mPOST /createUser [32m200 [0m118.009 ms - 445[0m
+[0mOPTIONS /createUser [32m204 [0m0.110 ms - -[0m
+Password recvd while creating user:test
+$2a$10$UzhCR1NILN0haDc/6x.MP.qpmmh5/mkOlLHgr6rs4H6eXmlFozjdO
+Hashed password as I am saving: $2a$10$UzhCR1NILN0haDc/6x.MP.qpmmh5/mkOlLHgr6rs4H6eXmlFozjdO
+[0mPOST /createUser [32m200 [0m119.322 ms - 384[0m
+[0mOPTIONS /createUser [32m204 [0m0.174 ms - -[0m
+Password recvd while creating user:test
+$2a$10$seHinDiYQxJ1HsnWwDsXiu3Cbq3qExA3K8jGQrkzVacZ6pQB7vAp2
+Hashed password as I am saving: $2a$10$seHinDiYQxJ1HsnWwDsXiu3Cbq3qExA3K8jGQrkzVacZ6pQB7vAp2
+[0mPOST /createUser [32m200 [0m117.218 ms - 299[0m
+[0mOPTIONS /createUser [32m204 [0m0.124 ms - -[0m
+Password recvd while creating user:test
+$2a$10$RRpuy70iYGFU1E1BSD8KOuLf/tsJbnF96EGUfOVhYVocwVfc38ZCe
+Hashed password as I am saving: $2a$10$RRpuy70iYGFU1E1BSD8KOuLf/tsJbnF96EGUfOVhYVocwVfc38ZCe
+[0mPOST /createUser [32m200 [0m121.636 ms - 304[0m
+[0mOPTIONS /createUser [32m204 [0m0.105 ms - -[0m
+Password recvd while creating user:test
+$2a$10$KJdcTcbPkVdqzUqVZdM.cun1J1RieCaAw8O8H104Ge4siOCLX0.bW
+Hashed password as I am saving: $2a$10$KJdcTcbPkVdqzUqVZdM.cun1J1RieCaAw8O8H104Ge4siOCLX0.bW
+[0mPOST /createUser [32m200 [0m114.403 ms - 304[0m
+[0mOPTIONS /createUser [32m204 [0m0.107 ms - -[0m
+Password recvd while creating user:test
+[0mPOST /createUser [33m409 [0m6.602 ms - 307[0m
+[0mOPTIONS /createUser [32m204 [0m0.145 ms - -[0m
+Password recvd while creating user:test
+[0mPOST /createUser [33m409 [0m6.270 ms - 307[0m
+[0mOPTIONS /createUser [32m204 [0m0.133 ms - -[0m
+Password recvd while creating user:test
+[0mPOST /createUser [33m409 [0m3.464 ms - 307[0m
+[0mOPTIONS /createUser [32m204 [0m0.094 ms - -[0m
+Password recvd while creating user:test
+[0mPOST /createUser [33m409 [0m5.550 ms - 307[0m
+[0mOPTIONS /createUser [32m204 [0m0.126 ms - -[0m
+Password recvd while creating user:test
+$2a$10$HbVcDH.IpV/Y1B9KdBbhceAdTP8haWSGJfgzGxBTY55dSpVMFI.4W
+Hashed password as I am saving: $2a$10$HbVcDH.IpV/Y1B9KdBbhceAdTP8haWSGJfgzGxBTY55dSpVMFI.4W
+[0mPOST /createUser [32m200 [0m117.737 ms - 325[0m
+Password recvd while login user:asdf
+Bcrypt returns: false
+[0mPOST /login [33m401 [0m116.094 ms - 40[0m
+Password recvd while login user:12345
+Bcrypt returns: false
+[0mPOST /login [33m401 [0m113.937 ms - 40[0m
+[0mOPTIONS /createUser [32m204 [0m0.102 ms - -[0m
+[object Object]
+[0mPOST /createUser [33m409 [0m21.564 ms - 44[0m
+[0mOPTIONS /createUser [32m204 [0m0.112 ms - -[0m
+Password recvd while creating user:griffnet01
+$2a$10$14wgfgeHGXSst4.PEum1k.NDJW0iGQoSQUO/Xj9xD.A16L9jhUbaq
+Hashed password as I am saving: $2a$10$14wgfgeHGXSst4.PEum1k.NDJW0iGQoSQUO/Xj9xD.A16L9jhUbaq
+[0mPOST /createUser [32m200 [0m115.730 ms - 300[0m
+Password recvd while login user:griffnet01
+Bcrypt returns: true
+[object Object]
+[0mPOST /login [32m200 [0m111.461 ms - 256[0m
+Password recvd while login user:griffnet01
+Bcrypt returns: true
+[object Object]
+[0mPOST /login [32m200 [0m110.724 ms - 256[0m
+[0mOPTIONS /requiresAuthentication [32m204 [0m0.084 ms - -[0m
+Value of req before[object Object]
+Value of req[object Object]
+[0mGET /requiresAuthentication [32m200 [0m3.064 ms - 0[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m4.697 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m1.636 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m2.904 ms - 42[0m
+Password recvd while login user:griffnet01
+Bcrypt returns: true
+[object Object]
+[0mPOST /login [32m200 [0m110.603 ms - 256[0m
+[0mOPTIONS /requiresAuthentication [32m204 [0m0.098 ms - -[0m
+Value of req before[object Object]
+Value of req[object Object]
+[0mGET /requiresAuthentication [32m200 [0m1.726 ms - 0[0m
+Password recvd while login user:griffnet01
+Bcrypt returns: true
+[object Object]
+[0mPOST /login [32m200 [0m115.603 ms - 256[0m
+Password recvd while login user:griffnet01
+Bcrypt returns: true
+[object Object]
+[0mPOST /login [32m200 [0m114.888 ms - 256[0m
+Password recvd while login user:sdf
+[0mPOST /login [33m401 [0m3.350 ms - 42[0m
+Password recvd while login user:sdf
+[0mPOST /login [33m401 [0m2.675 ms - 42[0m
+Password recvd while login user:sdf
+[0mPOST /login [33m401 [0m1.841 ms - 42[0m
+Password recvd while login user:sdf
+[0mPOST /login [33m401 [0m1.770 ms - 42[0m
+Password recvd while login user:sdf
+[0mPOST /login [33m401 [0m1.762 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m2.032 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m5.596 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m3.583 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m2.197 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m16.085 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m2.660 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m1.604 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m1.589 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m3.732 ms - 42[0m
+Password recvd while login user:
+[0mPOST /login [33m401 [0m1.676 ms - 42[0m
+Password recvd while login user:griffnet01
+Bcrypt returns: true
+[object Object]
+[0mPOST /login [32m200 [0m109.892 ms - 256[0m
+Password recvd while login user:griffnet01
+Bcrypt returns: true
+[object Object]
+[0mPOST /login [32m200 [0m107.584 ms - 256[0m
+Password recvd while login user:griffnet0
+Bcrypt returns: false
+[0mPOST /login [33m401 [0m109.524 ms - 40[0m
+Password recvd while login user:griffnet01
+Bcrypt returns: true
+[object Object]
+[0mPOST /login [32m200 [0m115.036 ms - 256[0m
+
+> home-healthware@1.0.0 start /srv/homehealthware
+> NODE_PATH=./config:./app/controllers NODE_ENV=development ./node_modules/.bin/nodemon server.js
+
+[33m[nodemon] 1.8.1[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node server.js`[39m
+
+stream.js:94
+      throw er; // Unhandled stream error in pipe.
+            ^
+Error: EBADF, read
+npm ERR! weird error 8
+npm WARN This failure might be due to the use of legacy binary "node"
+npm WARN For further explanations, please read
+/usr/share/doc/nodejs/README.Debian
+ 
+npm ERR! not ok code 0
+Express app started on port 9561
+[0mGET / [33m404 [0m6.800 ms - 35[0m
+[0mGET /favicon.ico [33m404 [0m0.943 ms - 46[0m
+[0mGET / [33m404 [0m0.754 ms - 35[0m

@@ -1,0 +1,29 @@
+[{
+    "co_id": "1",
+    "co_display_name": "Among Friends Adult Day Care",
+    "co_legal_name": "Among Friends Adult Day Care, Inc.",
+    "co_tin": "12-3456789",
+    "co_npi": "1571234567",
+    "co_address_1": "13333 S. Cicero Ave.",
+    "co_address_2": "",
+    "co_address_city": "Crestwood",
+    "co_address_state": "Illinois",
+    "co_address_zip": "60445",
+    "co_phone1": "7083962345",
+    "co_phone2": "7087552345",
+    "co_owner": "Ralph Ditchie"
+},{
+    "co_id": "2",
+    "co_display_name": "Xilin",
+    "co_legal_name": "Xilin, Home Services, Inc.",
+    "co_tin": "12-3456789",
+    "co_npi": "1571234567",
+    "co_address_1": "13333 S. Cicero Ave.",
+    "co_address_2": "",
+    "co_address_city": "Chicago",
+    "co_address_state": "Illinois",
+    "co_address_zip": "60445",
+    "co_phone1": "7083962345",
+    "co_phone2": "7087552345",
+    "co_owner": "Ralph Ditchie"
+}]

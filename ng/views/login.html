@@ -1,0 +1,42 @@
+<style>
+    .file-menu,
+    .file-menu ul,
+    .file-menu ul li,
+    .file-menu ul li a,
+    .file-menu ul li span {
+        display: none !important;
+    }
+</style>
+<link rel="stylesheet" href="css/login.css">
+<div class="body">
+    <div class="header">
+        <div>Login to:
+            <br><span>HomeHealthWare</span>
+            <br>
+        </div>
+    </div>
+    <br>
+    <form class="login" method="">
+        <input type="text" placeholder="Username" name="user" data-required="true" ng-model="loginData.email">
+        <br>
+        <input type="password" placeholder="Password" name="password" data-required="true" ng-model="loginData.password">
+        <br>
+        <input type="submit" ng-click="login()" class="btn" value="Login">
+
+    </form>
+</div>
+<script>
+    console.log(window.location.href);
+    // Form Validation && Smooth State Transition Animations //
+    $('.login').submit(function () {
+        var faults = $('input').filter(function () {
+            return $(this).data('required') && $(this).val() === "";
+        }).css("animation-name", "blink"); //pulse animation
+        if (faults.length) return false;
+        else {
+            $(".body").css("opacity", "0"), //smooth-state out animation
+                $(".file-menu").css("display", "inline");
+            return true;
+        }
+    });
+</script>
